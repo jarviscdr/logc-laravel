@@ -1,0 +1,29 @@
+{
+    "name": "jarviscdr/logc-laravel",
+    "description": "Logc服务Laravel专用包",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jarvis",
+            "email": "jarviscdr@outlook.com",
+            "homepage": "https://jarviscdr.github.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "jarviscdr/logc-client": "^0.1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jarviscdr\\LogcLaravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jarviscdr\\LogcLarvel\\LogcServiceProvider"
+            ]
+        }
+    }
+}
