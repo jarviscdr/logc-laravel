@@ -1,6 +1,6 @@
 <?php
 
-namespace Jarviscdr\LogcLarvel;
+namespace Jarviscdr\LogcLaravel;
 
 use Illuminate\Support\ServiceProvider;
 use Jarviscdr\LogcClient\Client;

@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jarviscdr\\LogcLarvel\\LogcServiceProvider"
+                "Jarviscdr\\LogcLaravel\\LogcServiceProvider"
             ]
         }
     }
