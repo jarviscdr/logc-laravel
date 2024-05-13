@@ -15,20 +15,19 @@ class LogcServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('logc', function ($app) {
-            $host = config('logc.api_host', 'http://127.0.0.1:10001');
-            $timeout = config('logc.api_timeout', 1.0);
-            $project = config('logc.project', 'logc');
-            $tags = config('logc.tags', []);
-            $throwException = config('logc.throw_exception', true);
+        $host = config('logc.api_host', 'http://127.0.0.1:10001');
+        $timeout = config('logc.api_timeout', 1.0);
+        $project = config('logc.project', 'logc');
+        $tags = config('logc.tags', []);
+        $throwException = config('logc.throw_exception', true);
 
-            $client = Client::getInstance()
-                ->setApiClient($host, $timeout)
-                ->setProject($project)
-                ->setTags($tags)
-                ->setThrowException($throwException);
-            return $client;
-        });
+        $client = Client::getInstance()
+            ->setApiClient($host, $timeout)
+            ->setProject($project)
+            ->setTags($tags)
+            ->setThrowException($throwException);
+
+        $this->app->instance('logc', $client);
     }
 
     /**
